@@ -1,10 +1,15 @@
 import 'package:ecommerce_app/routes/routes.dart';
+import 'package:ecommerce_app/utils/constants/provider.dart';
 import 'package:ecommerce_app/utils/constants/route_statics.dart';
 import 'package:ecommerce_app/utils/themes/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+      providers: getProviders(),
+      child: const MyApp(),
+    ),);
 }
 
 class MyApp extends StatelessWidget {
